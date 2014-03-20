@@ -42,6 +42,12 @@ sudo npm install -g jshint
 echo -e "\e[1;92m*******Installing ImageEditing Pinta*******\e[0m"
 sudo apt-get install -y pinta
 
+echo -e "\e[1;92m*******Installing exfat-fuse*******\e[0m"
+sudo apt-add-repository ppa:relan/exfat
+sudo apt-get -y update
+sudo apt-get install -y fuse
+sudo apt-get install -y exfat-fuse
+
 clear
 echo "******************************************************************************"
 echo -e "\e[1;92mInstalling Dotfiles screenrc, bash_profile, bashrc, bashrc_custom, emacs.d\e[0m"
