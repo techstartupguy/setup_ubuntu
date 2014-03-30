@@ -16,6 +16,19 @@ sudo apt-get -y autoremove
 
 clear
 echo "******************************************************************************"
+echo -e "\e[1;92mInstalling Dotfiles screenrc, bash_profile, bashrc, bashrc_custom, emacs.d\e[0m"
+echo "******************************************************************************"
+sleep 5
+
+#install dotfiles as well
+ln -sb ~/setup_workspace/dotfiles/.screenrc ~/.
+ln -sb ~/setup_workspace/dotfiles/.bash_profile ~/.
+ln -sb ~/setup_workspace/dotfiles/.bashrc ~/.
+ln -sb ~/setup_workspace/dotfiles/.bashrc_custom ~/.
+ln -sf ~/setup_workspace/dotfiles/.emacs.d ~/.
+
+clear
+echo "******************************************************************************"
 echo -e "\e[1;92mInstalling General Packages: SSH, GIT, CURL, EMACS\e[0m"
 echo "******************************************************************************"
 sleep 10
@@ -48,23 +61,10 @@ sudo apt-get -y update
 sudo apt-get install -y fuse
 sudo apt-get install -y exfat-fuse
 
-clear
-echo "******************************************************************************"
-echo -e "\e[1;92mInstalling Dotfiles screenrc, bash_profile, bashrc, bashrc_custom, emacs.d\e[0m"
-echo "******************************************************************************"
-sleep 5
-
-#install dotfiles as well
-ln -sb ~/setup_workspace/dotfiles/.screenrc ~/.
-ln -sb ~/setup_workspace/dotfiles/.bash_profile ~/.
-ln -sb ~/setup_workspace/dotfiles/.bashrc ~/.
-ln -sb ~/setup_workspace/dotfiles/.bashrc_custom ~/.
-ln -sf ~/setup_workspace/dotfiles/.emacs.d ~/.
-
 
 clear
 echo "******************************************************************************"
-echo -e "\e[1;92mInstalling Ctrlworks Packages: PYTHON, OPENCV, DJANGO, OPENTOK\e[0m"
+echo -e "\e[1;92mInstalling Work Packages: PYTHON, OPENCV, DJANGO, OPENTOK\e[0m"
 echo "******************************************************************************"
 sleep 5
 
@@ -78,6 +78,13 @@ sudo pip install django
 echo -e "\e[1;92m*******Installing OPENTOK*******\e[0m"
 sudo pip install opentok
 
+echo -e "\e[1;92m*******Installing Crazyflie API*******\e[0m"
+sudo apt-get -y install python2.7 python-usb python-pygame python-qt4
+
+echo -e "\e[1;92m*******Installing PyUserInput*******\e[0m"
+sudo pip install PyUserInput
+sudo apt-get -y install python-xlib
+
 bash ~/setup_workspace/ros.sh
 #bash ~/setup_workspace/ffmpeg.sh
 
@@ -90,12 +97,10 @@ sleep 5
 ### Pull sources
 cd $HOME
 git clone http://github.com/ctrlworks/pandaboard-middleware
-git clone http://github.com/ctrlworks/ros
 
-echo "source ~/pandaboard-middleware/scripts/setup.bash" >> ~/.bashrc
-echo "source ~/ros/setup.bash" >> ~/.bashrc
+
 echo "Install Google chrome yourself"
-echo "Generate ssh keys and send to Admin to give access to repositories"
+
 
 
 
