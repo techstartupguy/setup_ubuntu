@@ -96,7 +96,7 @@ sleep 5
 
 ### Pull sources
 cd $HOME
-git clone http://github.com/ctrlworks/pandaboard-middleware
+# git clone 
 
 
 echo "Install Google chrome yourself"
