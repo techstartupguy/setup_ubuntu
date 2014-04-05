@@ -222,7 +222,4 @@ fi
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
-source /opt/ros/groovy/setup.bash
-source /opt/ros/groovy/setup.bash
-source ~/pandaboard-middleware/scripts/setup.bash
-source ~/ros/setup.bash
+
