@@ -1,1 +1,1 @@
-
+alias lasthistory='tail -100 .bash_eternal_history | cut -f5-7'
