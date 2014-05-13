@@ -14,9 +14,8 @@ sudo apt-get install ros-indigo-desktop-full
 sudo apt-get -y install ros-indigo-rosbridge-suite
 sudo rosdep init
 rosdep update
-sudo apt-get install -y ros-groovy-joy
+sudo apt-get install -y ros-indigo-joy
 sudo apt-get install -y python-rosinstall
-sudo apt-get install -y ros-groovy-laser-drivers
 echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 
 sudo sed -i 's/CATKIN_SHELL=$CATKIN_SHELL "$_SETUP_UTIL" $@ > $_SETUP_TMP/CATKIN_SHELL=$CATKIN_SHELL "$_SETUP_UTIL" $@ >> $_SETUP_TMP/g' /opt/ros/indigo/setup.sh
