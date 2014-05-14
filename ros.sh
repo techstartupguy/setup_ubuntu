@@ -10,7 +10,7 @@ echo -e "\e[1;92m*******Installing ROS*******\e[0m"
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get -y update
-sudo apt-get install ros-indigo-desktop
+sudo apt-get -y install ros-indigo-desktop
 sudo apt-get -y install ros-indigo-rosbridge-suite
 sudo rosdep init
 rosdep update
