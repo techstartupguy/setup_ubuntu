@@ -16,9 +16,16 @@ sudo rosdep init
 rosdep update
 sudo apt-get install -y ros-hydro-joy
 sudo apt-get install -y python-rosinstall
-echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/hydro/setup.bash" >> ~/.bashrc
 
 sudo sed -i 's/CATKIN_SHELL=$CATKIN_SHELL "$_SETUP_UTIL" $@ > $_SETUP_TMP/CATKIN_SHELL=$CATKIN_SHELL "$_SETUP_UTIL" $@ >> $_SETUP_TMP/g' /opt/ros/hydro/setup.sh
 
 sudo sed -i 's/while [ $_i -lt $_CATKIN_ENVIRONMENT_HOOKS_COUNT ]; do/while [[ $_i -lt $_CATKIN_ENVIRONMENT_HOOKS_COUNT ]]; do/g' /opt/ros/hydro/setup.sh
 
+source /opt/ros/hydro/setup.bash
+
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+catkin_init_workspace
+cd ~/catkin_ws/
+catkin_make
