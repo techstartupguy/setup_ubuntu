@@ -29,6 +29,14 @@ ln -sf ~/setup_workspace/dotfiles/.emacs.d ~/.
 
 clear
 echo "******************************************************************************"
+echo -e "\e[1;92mInstalling Desktop Environments: Xubuntu\e[0m"
+echo "******************************************************************************"
+sleep 10
+
+sudo apt-get install -y xubuntu-desktop
+
+clear
+echo "******************************************************************************"
 echo -e "\e[1;92mInstalling General Packages: SSH, GIT, CURL, EMACS\e[0m"
 echo "******************************************************************************"
 sleep 10
