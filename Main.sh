@@ -93,6 +93,11 @@ echo -e "\e[1;92m*******Installing PyUserInput*******\e[0m"
 sudo pip install PyUserInput
 sudo apt-get -y install python-xlib
 
+echo -e "\e[1;92m*******Installing PyOkCupid*******\e[0m"
+sudo touch build/pyokc/README.md
+sudo pip install pyokc
+
+
 bash ~/setup_workspace/ros.sh
 #bash ~/setup_workspace/ffmpeg.sh
 
