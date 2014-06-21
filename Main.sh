@@ -43,6 +43,8 @@ sleep 10
 
 echo -e "\e[1;92m*******Installing SSH*******\e[0m"
 sudo apt-get install -y openssh-server
+echo -e "\e[1;92m*******Installing VNC server*******\e[0m"
+sudo apt-get install -y vnc4server
 echo -e "\e[1;92m*******Installing GIT*******\e[0m"
 sudo apt-get install -y git
 echo -e "\e[1;92m*******Installing CURL*******\e[0m"
@@ -92,10 +94,6 @@ sudo apt-get -y install python2.7 python-usb python-pygame python-qt4
 echo -e "\e[1;92m*******Installing PyUserInput*******\e[0m"
 sudo pip install PyUserInput
 sudo apt-get -y install python-xlib
-
-echo -e "\e[1;92m*******Installing PyOkCupid*******\e[0m"
-sudo touch build/pyokc/README.md
-sudo pip install pyokc
 
 
 bash ~/setup_workspace/ros.sh
