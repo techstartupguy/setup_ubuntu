@@ -29,11 +29,11 @@ ln -sf ~/setup_workspace/dotfiles/.emacs.d ~/.
 
 clear
 echo "******************************************************************************"
-echo -e "\e[1;92mInstalling Desktop Environments: Xubuntu\e[0m"
+echo -e "\e[1;92mInstalling Desktop Environments: Lubuntu\e[0m"
 echo "******************************************************************************"
 sleep 10
 
-sudo apt-get install -y xubuntu-desktop
+sudo apt-get install -y lubuntu-desktop
 
 clear
 echo "******************************************************************************"
