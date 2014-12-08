@@ -21,11 +21,11 @@ echo "**************************************************************************
 sleep 5
 
 #install dotfiles as well
-ln -sb ~/setup_workspace/dotfiles/.screenrc ~/.
-ln -sb ~/setup_workspace/dotfiles/.bash_profile ~/.
-ln -sb ~/setup_workspace/dotfiles/.bashrc ~/.
-ln -sb ~/setup_workspace/dotfiles/.bashrc_custom ~/.
-ln -sf ~/setup_workspace/dotfiles/.emacs.d ~/.
+ln -sb ~/setup_ubuntu/dotfiles/.screenrc ~/.
+ln -sb ~/setup_ubuntu/dotfiles/.bash_profile ~/.
+ln -sb ~/setup_ubuntu/dotfiles/.bashrc ~/.
+ln -sb ~/setup_ubuntu/dotfiles/.bashrc_custom ~/.
+ln -sf ~/setup_ubuntu/dotfiles/.emacs.d ~/.
 
 clear
 echo "******************************************************************************"
@@ -96,8 +96,8 @@ sudo pip install PyUserInput
 sudo apt-get -y install python-xlib
 
 
-bash ~/setup_workspace/ros.sh
-#bash ~/setup_workspace/ffmpeg.sh
+bash ~/setup_ubuntu/ros.sh
+#bash ~/setup_ubuntu/ffmpeg.sh
 
 clear
 echo "******************************************************************************"
