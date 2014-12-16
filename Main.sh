@@ -105,6 +105,11 @@ echo -e "\e[1;92mPulling GIT repositories\e[0m"
 echo "******************************************************************************"
 sleep 5
 
+#Setup git
+git config --global core.editor "nano"
+git config --global user.name "Gaurav"
+git config --global user.email "gg.spark@gmail.com"
+
 ### Pull sources
 cd $HOME
 # git clone 
