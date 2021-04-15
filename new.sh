@@ -62,7 +62,13 @@ echo -e "\033[1;31m Install Android Studio \033[0m"
 # Install VS Code
 echo -e "\033[1;31m Install VS Code \033[0m"
 which -a code && code --version
-
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+sudo apt -y install apt-transport-https
+sudo apt -y update
+sudo apt -y install code # or code-insiders
 which -a code && code --version
 code --install-extension ms-python.python
 code --install-extension dbaeumer.vscode-eslint
