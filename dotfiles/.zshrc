@@ -1,4 +1,3 @@
-source $HOME/.bash_profile
 export ZSH="$HOME/.oh-my-zsh" # Path to your oh-my-zsh installation.
 ZSH_THEME="agnoster"
 DISABLE_AUTO_UPDATE="true" # disable bi-weekly auto-update checks.
