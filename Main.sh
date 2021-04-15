@@ -79,7 +79,7 @@ echo "**************************************************************************
 sleep 5
 
 echo -e "\e[1;92m*******Installing PYTHON*******\e[0m"
-sudo apt-get install -y git python-dev python-pip ntp 
+sudo apt-get install -y git python-dev python-pip ntp
 sudo pip install psutil
 echo -e "\e[1;92m*******Installing OpenCV*******\e[0m"
 sudo apt-get install -y libopencv-dev
@@ -107,8 +107,8 @@ sleep 5
 
 #Setup git
 git config --global core.editor "nano"
-git config --global user.name "Gaurav"
-git config --global user.email "gg.spark@gmail.com"
+git config --global user.name "$(whoami)"
+git config --global user.email "$(whoami)@no-reply.com"
 
 ### Pull sources
 cd $HOME
@@ -116,7 +116,3 @@ cd $HOME
 
 
 echo "Install Google chrome yourself"
-
-
-
-
