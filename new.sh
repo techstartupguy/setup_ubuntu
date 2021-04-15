@@ -4,11 +4,24 @@ SECONDS=0
 
 # Enter password to continue
 echo -e "\033[1;31m Enter password to start \033[0m"
-say "Enter password to start"
 sudo -v # Take sudo permission to not ask in future
 # Set default shell to zsh
 sudo chsh -s /bin/zsh #For Root
 chsh -s /bin/zsh #For user
+sudo apt -y update
+sudo apt -y upgrade
+
+# Install dotfiles
+echo -e "\033[1;31m Install dotfiles \033[0m"
+
+# Install Defaults
+echo -e "\033[1;31m Install Defaults \033[0m"
+# Setup git
+git config --global core.editor "nano"
+git config --global user.name "$(whoami)"
+git config --global user.email "$(whoami)@no-reply.com"
+git config --global core.excludesfile ~/.gitignore_global
+
 
 
 # Complete
