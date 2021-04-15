@@ -13,6 +13,8 @@ sudo apt -y upgrade
 
 # Install dotfiles
 echo -e "\033[1;31m Install dotfiles \033[0m"
+sudo cp ./dotfiles/.gitignore_global ~/.
+sudo cp ./dotfiles/.zshrc ~/.
 
 # Install Defaults
 echo -e "\033[1;31m Install Defaults \033[0m"
